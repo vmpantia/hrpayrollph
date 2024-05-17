@@ -4,7 +4,7 @@ namespace HRPayrollPH.Domain.Contractors.Repositories
 {
     public interface IEmployeeRepository : IBaseRepository<Employee>
     {
-        Task<Employee> GetEmployeeAsync(Guid id);
-        Task<IEnumerable<Employee>> GetEmployeesAsync();
+        Task<IEnumerable<Employee>> GetEmployeesFullInfoAsync();
+        Task<Employee> GetEmployeeFullInfoAsync(Guid id);
     }
 }

@@ -6,6 +6,7 @@ namespace HRPayrollPH.Domain.Models.Entities
     [PrimaryKey(nameof(Id))]
     public class Employee : BaseEntity<Guid>
     {
+        public Guid PositionId { get; set; }
         public string UniqueId { get; set; }
         public string FirstName { get; set; }
         public string? MiddleName { get; set; }
@@ -16,6 +17,8 @@ namespace HRPayrollPH.Domain.Models.Entities
         public string Email { get; set; }
         public string Phone { get; set; }
         public EmploymentType Type { get; set; }
-        public EmployeeStatus Status { get; set; }
+        public CommonStatus Status { get; set; }
+
+        public virtual Position Position { get; set; }
     }
 }

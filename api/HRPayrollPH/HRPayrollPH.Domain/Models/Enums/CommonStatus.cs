@@ -1,6 +1,6 @@
 ﻿namespace HRPayrollPH.Domain.Models.Enums
 {
-    public enum EmployeeStatus
+    public enum CommonStatus
     {
         Enabled,
         Disabled,
