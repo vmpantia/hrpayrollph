@@ -15,6 +15,8 @@ namespace HRPayrollPH.Infrastructure.Databases.Contexts
         {
             modelBuilder.Entity<Employee>(emp =>
             {
+                emp.HasKey(prop => prop.Id);
+
                 emp.HasIndex(prop => new { prop.UniqueId, prop.LastName, prop.Status, prop.Type });
 
                 emp.HasOne(prop => prop.Position)
@@ -22,27 +24,31 @@ namespace HRPayrollPH.Infrastructure.Databases.Contexts
                    .HasForeignKey(prop => prop.PositionId);
             });
 
-            modelBuilder.Entity<Position>(emp =>
+            modelBuilder.Entity<Position>(pos =>
             {
-                emp.HasIndex(prop => new { prop.Name, prop.Status });
+                pos.HasKey(prop => prop.Id);
 
-                emp.HasOne(prop => prop.Department)
+                pos.HasIndex(prop => new { prop.Name, prop.Status });
+
+                pos.HasOne(prop => prop.Department)
                    .WithMany(prop => prop.Positions)
                    .HasForeignKey(prop => prop.DepartmentId);
 
-                emp.HasMany(prop => prop.Employees)
+                pos.HasMany(prop => prop.Employees)
                    .WithOne(prop => prop.Position)
                    .HasForeignKey(prop => prop.PositionId);
             });
 
-            modelBuilder.Entity<Department>(emp =>
+            modelBuilder.Entity<Department>(dept =>
             {
-                emp.HasIndex(prop => new { prop.Name, prop.Status });
+                dept.HasKey(prop => prop.Id);
 
-                emp.HasMany(prop => prop.Positions)
-                   .WithOne(prop => prop.Department)
-                   .HasForeignKey(prop => prop.DepartmentId);
-            });
+                dept.HasIndex(prop => new { prop.Name, prop.Status });
+
+                dept.HasMany(prop => prop.Positions)
+                    .WithOne(prop => prop.Department)
+                    .HasForeignKey(prop => prop.DepartmentId);
+            });     
         }
     }
 }

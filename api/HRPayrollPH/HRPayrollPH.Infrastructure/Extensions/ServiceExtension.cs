@@ -9,7 +9,7 @@ namespace HRPayrollPH.Infrastructure.Extensions
 {
     public static class ServiceExtension
     {
-        public static void AddInfrastructure(IServiceCollection services, IConfiguration configuration) =>
+        public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration) =>
             services.AddDbContext<HRPayrollPHDbContext>(context => context.UseSqlServer(configuration.GetConnectionString("MigrationDb")))
                     .AddScoped<IEmployeeRepository, EmployeeRepository>();
     }

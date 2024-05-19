@@ -32,7 +32,7 @@ namespace HRPayrollPH.Domain.Data
                 .RuleFor(p => p.FirstName, f => f.Name.FirstName())
                 .RuleFor(p => p.LastName, f => f.Name.LastName())
                 .RuleFor(p => p.Gender, f => f.PickRandom<Gender>())
-                .RuleFor(p => p.BirthDate, f => f.Date.PastDateOnly())
+                .RuleFor(p => p.BirthDate, f => f.Date.Past())
                 .RuleFor(p => p.Email, f => f.Internet.Email())
                 .RuleFor(p => p.Phone, f => f.Phone.PhoneNumber())
                 .RuleFor(p => p.Type, f => f.PickRandom<EmploymentType>())

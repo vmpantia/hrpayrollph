@@ -10,19 +10,19 @@ namespace HRPayrollPH.Infrastructure.Databases.Repositories
     {
         public EmployeeRepository(HRPayrollPHDbContext context) : base(context) { }
 
-        public async Task<IEnumerable<Employee>> GetEmployeesFullInfoAsync() =>
+        public async Task<IEnumerable<Employee>> GetEmployeesFullInfoAsync(CancellationToken cancellationToken) =>
             await All.Include(tbl => tbl.Position)
                         .ThenInclude(tbl => tbl.Department)
                      .Where(data => data.Status != CommonStatus.Deleted)
                      .AsSplitQuery()
-                     .ToListAsync();
+                     .ToListAsync(cancellationToken);
 
-        public async Task<Employee> GetEmployeeFullInfoAsync(Guid id) =>
+        public async Task<Employee> GetEmployeeFullInfoAsync(Guid id, CancellationToken cancellationToken) =>
             await Find(data => data.Id == id)
                      .Include(tbl => tbl.Position)
                         .ThenInclude(tbl => tbl.Department)
                      .Where(data => data.Status != CommonStatus.Deleted)
                      .AsSplitQuery()
-                     .FirstAsync();
+                     .FirstAsync(cancellationToken);
     }
 }

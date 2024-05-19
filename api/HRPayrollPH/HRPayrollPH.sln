@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPayrollPH.Infrastructure", "HRPayrollPH.Infrastructure\HRPayrollPH.Infrastructure.csproj", "{C0866182-6F9E-4786-AB5B-711AB7049BB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRPayrollPH.Infrastructure", "HRPayrollPH.Infrastructure\HRPayrollPH.Infrastructure.csproj", "{C0866182-6F9E-4786-AB5B-711AB7049BB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPayrollPH.Domain", "HRPayrollPH.Domain\HRPayrollPH.Domain.csproj", "{2E84BFE7-9A3C-4483-8C61-9D5DBE8F474F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRPayrollPH.Domain", "HRPayrollPH.Domain\HRPayrollPH.Domain.csproj", "{2E84BFE7-9A3C-4483-8C61-9D5DBE8F474F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPayrollPH.Core", "HRPayrollPH.Core\HRPayrollPH.Core.csproj", "{5BDC7117-EDA7-4399-AB48-1121D9C796FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPayrollPH.Api", "HRPayrollPH.Api\HRPayrollPH.Api.csproj", "{0E51BF70-8931-4C67-A41F-6A560B70ACB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{2E84BFE7-9A3C-4483-8C61-9D5DBE8F474F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E84BFE7-9A3C-4483-8C61-9D5DBE8F474F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E84BFE7-9A3C-4483-8C61-9D5DBE8F474F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BDC7117-EDA7-4399-AB48-1121D9C796FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BDC7117-EDA7-4399-AB48-1121D9C796FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BDC7117-EDA7-4399-AB48-1121D9C796FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BDC7117-EDA7-4399-AB48-1121D9C796FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E51BF70-8931-4C67-A41F-6A560B70ACB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E51BF70-8931-4C67-A41F-6A560B70ACB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E51BF70-8931-4C67-A41F-6A560B70ACB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E51BF70-8931-4C67-A41F-6A560B70ACB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
