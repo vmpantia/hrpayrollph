@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace HRPayrollPH.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("employees")]
     public class EmployeeController : BaseController
     {
         public EmployeeController(IMediator mediator) : base(mediator) { }

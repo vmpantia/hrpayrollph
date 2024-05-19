@@ -4,6 +4,7 @@ using HRPayrollPH.Infrastructure.Databases.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRPayrollPH.Infrastructure.Migrations
 {
     [DbContext(typeof(HRPayrollPHDbContext))]
-    partial class HRPayrollPHDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240519063646_AddInitialDataForEmployeeDepartmentAndPositionTables")]
+    partial class AddInitialDataForEmployeeDepartmentAndPositionTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

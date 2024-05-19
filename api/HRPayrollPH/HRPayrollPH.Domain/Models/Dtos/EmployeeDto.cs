@@ -9,6 +9,9 @@ namespace HRPayrollPH.Domain.Models.Dtos
         public string FirstName { get; set; }
         public string? MiddleName { get; set; }
         public string LastName { get; set; }
+        public string FullName => string.Concat(LastName, ", ", FirstName, 
+                                                string.IsNullOrEmpty(MiddleName) ? string.Empty 
+                                                                                 : $"{MiddleName.Substring(0, 1).ToUpper()}.");
         public string Gender { get; set; }
         public DateTime BirthDate { get; set; }
         public string? BirthPlace { get; set; }
